@@ -1,0 +1,23 @@
+{
+  "name": "hfxtransitapp",
+  "version": "1.0.0",
+  "description": "A experiment in using GTFS data to map bus routes in Halifax",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukemelong/hfxtransitapp.git"
+  },
+  "author": "Luke Melong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukemelong/hfxtransitapp/issues"
+  },
+  "homepage": "https://github.com/lukemelong/hfxtransitapp#readme",
+  "dependencies": {
+    "gtfs": "^1.9.3",
+    "mongoose": "^5.8.7"
+  }
+}
