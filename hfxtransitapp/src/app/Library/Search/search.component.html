@@ -1,0 +1,30 @@
+<div class="form">
+    <div class="form-group">
+        <label for="query">Query</label>
+        <input type="text" class="form-control" id="query" placeholder="Query" [(ngModel)]="query" autofocus>
+    </div>
+    <button type="button" class="btn btn-secondary" (click)="onSearchBooks()">Search By Name</button>
+    <button type="button" class="btn btn-primary" (click)="onGetBookByISBN()">Search By ISBN</button>
+</div>
+
+
+<h1 *ngIf="ibnBook">
+    {{ ibnBook.title }}
+</h1>
+<div *ngIf="searchBooks">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let book of searchBooks">
+            <div class="row">
+                <div class="col-lg-2">
+                    <img src="http://covers.openlibrary.org/b/ID/{{ book.cover_i }}-S.jpg">
+                </div>
+                <div class="col-lg-10">
+                    <h2>{{ book.title }}</h2>
+                    <p>{{ book.author_name }}, <span style="font-style: italic;">{{ book.first_publish_year }}</span></p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
